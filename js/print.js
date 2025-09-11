@@ -105,7 +105,6 @@
     <div class="left">
       <div class="hdr">
         <div class="brand">
-          <div class="dot"></div>
           <div>
             <div class="title">Óptica Cristal</div>
             <div class="sub">San Miguel • Argentina</div>
@@ -172,7 +171,8 @@
     <div class="r-text">
       <div class="r-line">Av. Ricardo Balbín 1125</div>
       <div class="r-line">San Miguel</div>
-      <div class="r-line">Cel/Whatsapp 11 5668 9919</div>
+      <div class="r-line">Cel/Whatsapp 11-5668-9919</div>
+      
     </div>
   </div>
 
@@ -199,7 +199,7 @@
     <style>
       @page { size: A4; margin: 0; }
       * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      html, body { margin:0; padding:0; background:#fff; color:#111; font: 9.5pt/1.3 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; }
+      html, body { margin:0; padding:0; background:#fff; color:#111; font: 10.2pt/1.3 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; }
       .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
       .sheet { width:${PAGE_W_MM}mm; height:${PAGE_H_MM}mm; }
       .canvas { width:${PAGE_W_MM}mm; height:${PAGE_H_MM}mm; padding:8mm 6mm 6mm;
@@ -216,7 +216,7 @@
       .nro .lbl{ font-size:8pt; color:#6b7280; }
       .nro .val{ font-weight:800; }
 
-      .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:1.8mm 3mm; }
+      .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:0.8mm 3mm; }
       .kv{ display:grid; grid-template-columns:22mm 1fr; column-gap:1.8mm; align-items:baseline; }
       .kv .k{ color:#505a6b; font-size:8.5pt; } .kv .v{ font-weight:600; }
 
@@ -232,14 +232,36 @@
       .vendedor{ color:#505a6b; }
 
 
-      .right .r-head{ display:grid; grid-template-columns:20mm 1fr;             column-gap:2mm; align-items:center; margin-bottom:1.2mm; }
-      .r-logo-img{ width:20mm; height:20mm; object-fit:contain; }
-      .r-line{ font-size:8.5pt; color:#505a6b; line-height:1.2; }
+      .right .r-head{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      margin-bottom:2mm;
+      }
+      
+      .r-logo-img{
+      width:40mm;
+      height:auto;
+      object-fit:contain;
+      margin-bottom:1mm;
+      }
+      
+      
+      .r-line{
+      font-size:10pt;
+      color:#505a6b;
+      line-height:1.3;
+      }
+
+      
       .right .r-logo-dot{ width:7mm; height:7mm; background:${BRAND}; border-radius:50%; }
       .right .r-title{ font-weight:800; color:${BRAND}; line-height:1.1; }
       .right .r-sub{ color:#6b7280; font-size:8pt; line-height:1.1; margin-top:.2mm; }
-      .right .r-kv{ display:grid; grid-template-columns:16mm 1fr; gap:1.2mm; align-items:baseline; margin:.6mm 0; }
-      .right .rk{ color:#505a6b; font-size:8.5pt; } .right .rv{ font-weight:700; }
+      
+      .right .r-kv{ display:grid; grid-template-columns:22mm 1fr; gap:1.2mm; align-items:baseline; margin:.6mm 0; }
+      .right .rk{ color:#505a6b; font-size:8.5pt; white-space:nowrap }
+      .right .rv{ font-weight:700; }
+      
       .right .r-qr{ margin-top:2mm; display:flex; justify-content:center; }
       .right .r-qr img{ width:34mm; height:34mm; object-fit:contain; }
     </style>`;
